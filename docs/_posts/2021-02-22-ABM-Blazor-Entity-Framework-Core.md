@@ -2,6 +2,17 @@
 layout: post
 title:  "¿Cómo implementar un ABM con Blazor usando Entity Framework Core? Demostración detallada"
 ---
+---
+title:  "¿Cómo implementar un ABM con Blazor usando Entity Framework Core? Demostración detallada"
+categories:
+  - c# .Net Blazor
+tags:
+  - c#
+  - .Net
+  - Blazor
+  - CRUD
+  - abm
+---
 
 ## ¿Cómo implementar un ABM con Blazor usando Entity Framework Core? Demostración detallada
 
