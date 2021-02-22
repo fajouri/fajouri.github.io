@@ -32,7 +32,7 @@ Puedes ver que Visual Studio genera automáticamente 3 proyectos diferentes, es 
 **Básicamente, el servidor tendrá los puntos de entrada de la API (End Points) a los que puede acceder el proyecto cliente. Tenga en cuenta que esta es una aplicación única y se ejecuta en el mismo puerto. Por lo tanto, no surge la necesidad de acceso a CORS. Todos estos proyectos se ejecutarán directamente en su navegador y no necesitan un servidor dedicado.**
 
 Para comenzar con nuestra aplicación Blazor ABM, agreguemos un modelo de Programador a nuestro proyecto compartido en la carpeta Modelos (crea la carpeta). 
-```C#
+```
    public class Programador
     {
         public int Id { get; set; }
@@ -59,7 +59,7 @@ Vaya a appsettings.json en el Proyecto de servidor y agregue la Cadena de conexi
 ```
 ## Agregar contexto de aplicación
 Necesitaremos un contexto de base de datos para trabajar con los datos. Cree una nueva clase en el proyecto de servidor en Data / AplicacionDBContext.cs
-```C#
+```
  public class AplicacionDbContext:DbContext
  {
    public AplicacionDbContext(DbContextOptions<AplicacionDbContext> options) : base(options)
@@ -72,13 +72,13 @@ Agregaremos DbSet de Programadores a nuestro contexto. Usando esta clase de cont
 
 # Configuración
 Necesitaremos agregar EF Core y definir su cadena de conexión. Navegue hasta Startup.cs que se encuentra en el proyecto del servidor y agregue la siguiente línea al método ConfigureServices.
-```C#
+```
 services.AddDbContext<AplicacionDbContext>(op =>
                 op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 ```
 ## Generación / migración de la base de datos
 Ahora que nuestro Entity Framework Core está configurado y listo en la aplicación ASP.NET Core, hagamos las migraciones y actualicemos nuestra base de datos. Para esto, abra la Consola del Administrador de paquetes y escriba lo siguiente.
-```C#
+```
 add-migration Initial
 update-database
 ```
@@ -104,7 +104,7 @@ Aquí hemos inyectado una nueva instancia de ApplicationDBContent al constructor
 
 ## GET
 Un método para obtener todos los programadores de la instancia de contexto.
-```C#
+```
 [HttpGet]
 public async Task<IActionResult> Get()
 {
@@ -116,7 +116,7 @@ public async Task<IActionResult> Get()
 ## GET BY ID
 Obtener por identificación el detalles de un desarrollador que coincide con el ID pasado como parámetro. 
 
-```C#
+```
 [HttpGet("{id}")]
 public async Task<IActionResult> Get(int id)
 {
@@ -126,7 +126,7 @@ public async Task<IActionResult> Get(int id)
 ```
 ## Create
 Creamos un nuevo Programador con el objeto pasado como parametro.
-```C#
+```
 [HttpPost]
 public async Task<IActionResult> Post(Programador programador)
 {
@@ -138,7 +138,7 @@ public async Task<IActionResult> Post(Programador programador)
 
 ## Update
 Modificamos un programador existente.
-```C#
+```
 [HttpPut]
 public async Task<IActionResult> Put(Programador programador)
 {
@@ -151,7 +151,7 @@ public async Task<IActionResult> Put(Programador programador)
 ## Delete
 Eliminamos un programador por su Id.
 
-```C#
+```
 [HttpDelete("{id}")]
 public async Task<IActionResult> Delete(int id)
 {
@@ -177,7 +177,7 @@ Tendremos que agregar una nueva entrada en la barra lateral del menú de navegac
 
 # Espacios de nombres compartidos
 A lo largo de este tutorial usaremos la clase de modelo Shared/Models/Programador.cs. Por lo tanto agreguemos este espacio de nombres a _Imports.razor, para que se pueda acceder a él en todos nuestros componentes nuevos.
-```C#
+```
 @using Blazor.Abm.Shared.Models
 ```
 # Estructura de carpeta sugerida
@@ -195,7 +195,7 @@ Listado.razor es la pantalla principal que permitr recuperar todos los datos y m
 # Componente Listado
 Comenzaremos construyendo nuestro componente de índice que busca a todos los programadores de la base de datos. Llamémoslo Componente Listado. Cree un nuevo componente Blazor en Pages, Pages/Programadores/Listado.razor
 
-```C#
+```
 @page "/programador"
 @inject HttpClient clienteHttp
 @inject IJSRuntime js
@@ -278,7 +278,7 @@ Creemos nuestra aplicación! y hagamos la prueba.
 ## Componente Formulario
 Agreguemos un nuevo componente Razor en Pages/Programadores/Formulario.razor
 
-```C#
+```
 <EditForm Model="@programador" OnValidSubmit="@OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="form-group">
@@ -330,7 +330,7 @@ _Pensando en esto, siento que esto es bastante similar a los conceptos de Interf
 
 ## ¿Para qué sirve la etiqueta de parámetro?
 En Blazor, se puede agregar parámetros a cualquier componente decorándolos con una etiqueta de parámetro [Parameter]. Hace disponible para que los componentes externos pasen estos parámetros. En nuestro caso, hemos definido el objeto Programador como uno de los parámetros de los componentes del Formulario. Por lo tanto, los otros componentes que utilizarán los componentes de formulario, es decir, los componentes de creación / edición tienen una opción para pasar el objeto de programador como un parámetro a los componentes de formulario. Esto ayuda a una alta reutilización de los componentes.
-```C#
+```
 @code {
     [Parameter] public Programador programador { get; set; }
     [Parameter] public string ButtonText { get; set; } = "Guardar";
@@ -340,7 +340,7 @@ En Blazor, se puede agregar parámetros a cualquier componente decorándolos con
 
 ## Componente Crear  
 Ahora, comencemos a utilizar el componente Formulario creado anteriormente. Construiremos una interfaz para agregar un nuevo programador. Cree un nuevo componente Razor, Pages/Programadores/Create.razor
-```C#
+```
 @page "/programador/create"
 @inject HttpClient ClienteHttp
 @inject NavigationManager UriHelper
@@ -365,7 +365,7 @@ Ejecute la aplicación para hacer una prueba. Vaya a la pestaña Programadores y
 
 # Componente Editar
 Cree un nuevo componente en Pages/Programadores/Edit.razor
-```C#
+```
 @page "/programador/edit/{programadorId:int}"
 @inject HttpClient Clientehttp
 @inject NavigationManager uriHelper
