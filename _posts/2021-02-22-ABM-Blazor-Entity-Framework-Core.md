@@ -25,16 +25,23 @@ Pensé que sería bueno si les mostrara lo que vamos a construir antes de saltar
 
 ## Creando el proyecto Blazor ABM
 Comencemos con la aplicación Blazor WebAssembly ABM creando una nueva aplicación Blazor. Siga las capturas de pantalla a continuación. 
+![Primer paso Crear Proyecto Blazor](/assets/images/CrearProyecto.PNG)
+
+![Segundo paso Crear Proyecto Blazor](/assets/images/2.PNG)
+
+![Tercer paso Crear Proyecto Blazor](/assets/images/3.PNG)
 
 Puedes ver que Visual Studio genera automáticamente 3 proyectos diferentes, es decir, Cliente, Servidor y Compartido (shared).
 1. Cliente: donde reside la aplicación Blazor junto con los componentes de Razor.
 2. Servidor: se usa principalmente como un contenedor que tiene características ASP.NET Core (lo usamos aquí para EF Core, controladores Api [Api controllers] y DB).
 3. Compartido: como sugiere el nombre, todos los modelos de entidad se definirán aquí.
 
+![Primer paso Crear Proyecto Blazor](/assets/images/solucion.PNG)
+
 **Básicamente, el servidor tendrá los puntos de entrada de la API (End Points) a los que puede acceder el proyecto cliente. Tenga en cuenta que esta es una aplicación única y se ejecuta en el mismo puerto. Por lo tanto, no surge la necesidad de acceso a CORS. Todos estos proyectos se ejecutarán directamente en su navegador y no necesitan un servidor dedicado.**
 
 Para comenzar con nuestra aplicación Blazor ABM, agreguemos un modelo de Programador a nuestro proyecto compartido en la carpeta Modelos (crea la carpeta). 
-```
+```ruby
    public class Programador
     {
         public int Id { get; set; }
@@ -53,7 +60,7 @@ Install-Package Microsoft.EntityFrameworkCore.Tools
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 ```
 Vaya a appsettings.json en el Proyecto de servidor y agregue la Cadena de conexión.
-```C#
+```ruby
 "ConnectionStrings": {
     "DefaultConnection": "<Connection String Here>"
   },
@@ -74,7 +81,7 @@ Agregaremos DbSet de Programadores a nuestro contexto. Usando esta clase de cont
 
 # Configuración
 Necesitaremos agregar EF Core y definir su cadena de conexión. Navegue hasta Startup.cs que se encuentra en el proyecto del servidor y agregue la siguiente línea al método ConfigureServices.
-```
+```ruby
 services.AddDbContext<AplicacionDbContext>(op =>
                 op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 ```
@@ -89,7 +96,7 @@ update-database
 ## Controller de Programadores.
 Ahora que nuestra base de datos y EF Core están configurados, crearemos un controlador API que entregará los datos a nuestro cliente Blazor. Cree un controlador API vacío, Controllers/ProgramadorController.cs
 
-```C#
+```ruby
 [Route("api/[controller]")]
 [ApiController]
 public class ProgramadorController : ControllerBase
@@ -106,7 +113,7 @@ Aquí hemos inyectado una nueva instancia de ApplicationDBContent al constructor
 
 ## GET
 Un método para obtener todos los programadores de la instancia de contexto.
-```
+```ruby
 [HttpGet]
 public async Task<IActionResult> Get()
 {
@@ -118,7 +125,7 @@ public async Task<IActionResult> Get()
 ## GET BY ID
 Obtener por identificación el detalles de un desarrollador que coincide con el ID pasado como parámetro. 
 
-```
+```ruby
 [HttpGet("{id}")]
 public async Task<IActionResult> Get(int id)
 {
@@ -128,7 +135,7 @@ public async Task<IActionResult> Get(int id)
 ```
 ## Create
 Creamos un nuevo Programador con el objeto pasado como parametro.
-```
+```ruby
 [HttpPost]
 public async Task<IActionResult> Post(Programador programador)
 {
@@ -153,7 +160,7 @@ public async Task<IActionResult> Put(Programador programador)
 ## Delete
 Eliminamos un programador por su Id.
 
-```
+```ruby
 [HttpDelete("{id}")]
 public async Task<IActionResult> Delete(int id)
 {
@@ -169,7 +176,7 @@ Una vez terminado el Backend, continuemos construyendo nuestra aplicación ABM B
 ## Agregar una nueva entrada al menú de navegación
 Tendremos que agregar una nueva entrada en la barra lateral del menú de navegación para acceder a las Páginas. En el proyecto del cliente, navegue a Shared/NavMenu.razor y agregue una entrada similar a la siguiente.
 
-```C#
+```ruby
 <li class="nav-item px-3">
    <NavLink class="nav-link" href="programador">
       <span class="oi oi-people" aria-hidden="true"></span> Programadores
@@ -197,7 +204,7 @@ Listado.razor es la pantalla principal que permitr recuperar todos los datos y m
 # Componente Listado
 Comenzaremos construyendo nuestro componente de índice que busca a todos los programadores de la base de datos. Llamémoslo Componente Listado. Cree un nuevo componente Blazor en Pages, Pages/Programadores/Listado.razor
 
-```
+```ruby
 @page "/programador"
 @inject HttpClient clienteHttp
 @inject IJSRuntime js
@@ -280,7 +287,7 @@ Creemos nuestra aplicación! y hagamos la prueba.
 ## Componente Formulario
 Agreguemos un nuevo componente Razor en Pages/Programadores/Formulario.razor
 
-```
+```ruby
 <EditForm Model="@programador" OnValidSubmit="@OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="form-group">
@@ -332,7 +339,7 @@ _Pensando en esto, siento que esto es bastante similar a los conceptos de Interf
 
 ## ¿Para qué sirve la etiqueta de parámetro?
 En Blazor, se puede agregar parámetros a cualquier componente decorándolos con una etiqueta de parámetro [Parameter]. Hace disponible para que los componentes externos pasen estos parámetros. En nuestro caso, hemos definido el objeto Programador como uno de los parámetros de los componentes del Formulario. Por lo tanto, los otros componentes que utilizarán los componentes de formulario, es decir, los componentes de creación / edición tienen una opción para pasar el objeto de programador como un parámetro a los componentes de formulario. Esto ayuda a una alta reutilización de los componentes.
-```
+```ruby
 @code {
     [Parameter] public Programador programador { get; set; }
     [Parameter] public string ButtonText { get; set; } = "Guardar";
@@ -342,7 +349,7 @@ En Blazor, se puede agregar parámetros a cualquier componente decorándolos con
 
 ## Componente Crear  
 Ahora, comencemos a utilizar el componente Formulario creado anteriormente. Construiremos una interfaz para agregar un nuevo programador. Cree un nuevo componente Razor, Pages/Programadores/Create.razor
-```
+```ruby
 @page "/programador/create"
 @inject HttpClient ClienteHttp
 @inject NavigationManager UriHelper
@@ -367,7 +374,7 @@ Ejecute la aplicación para hacer una prueba. Vaya a la pestaña Programadores y
 
 # Componente Editar
 Cree un nuevo componente en Pages/Programadores/Edit.razor
-```
+```ruby
 @page "/programador/edit/{programadorId:int}"
 @inject HttpClient Clientehttp
 @inject NavigationManager uriHelper
