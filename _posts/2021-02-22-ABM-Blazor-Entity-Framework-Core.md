@@ -6,6 +6,8 @@ tags:
   - c#
   - Blazor
   - .Net core
+  - ABM
+  - Crud
 ---
 
 ## ¿Cómo implementar un ABM con Blazor usando Entity Framework Core? Demostración detallada
