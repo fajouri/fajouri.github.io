@@ -53,7 +53,7 @@ Para comenzar con nuestra aplicación Blazor ABM, agreguemos un modelo de Progra
 ```
 ## Entity Framework Core
 Ahora, vaya al proyecto del servidor e instale los siguientes paquetes necesarios para habilitar EF Core.
-```
+```ruby
 Install-Package Microsoft.EntityFrameworkCore
 Install-Package Microsoft.EntityFrameworkCore.Design
 Install-Package Microsoft.EntityFrameworkCore.Tools
@@ -68,7 +68,7 @@ Vaya a appsettings.json en el Proyecto de servidor y agregue la Cadena de conexi
 ```
 ## Agregar contexto de aplicación
 Necesitaremos un contexto de base de datos para trabajar con los datos. Cree una nueva clase en el proyecto de servidor en Data / AplicacionDBContext.cs
-```
+```ruby
  public class AplicacionDbContext:DbContext
  {
    public AplicacionDbContext(DbContextOptions<AplicacionDbContext> options) : base(options)
@@ -87,7 +87,7 @@ services.AddDbContext<AplicacionDbContext>(op =>
 ```
 ## Generación / migración de la base de datos
 Ahora que nuestro Entity Framework Core está configurado y listo en la aplicación ASP.NET Core, hagamos las migraciones y actualicemos nuestra base de datos. Para esto, abra la Consola del Administrador de paquetes y escriba lo siguiente.
-```
+```ruby
 add-migration Initial
 update-database
 ```
@@ -147,7 +147,7 @@ public async Task<IActionResult> Post(Programador programador)
 
 ## Update
 Modificamos un programador existente.
-```
+```ruby
 [HttpPut]
 public async Task<IActionResult> Put(Programador programador)
 {
@@ -186,7 +186,7 @@ Tendremos que agregar una nueva entrada en la barra lateral del menú de navegac
 
 # Espacios de nombres compartidos
 A lo largo de este tutorial usaremos la clase de modelo Shared/Models/Programador.cs. Por lo tanto agreguemos este espacio de nombres a _Imports.razor, para que se pueda acceder a él en todos nuestros componentes nuevos.
-```
+```ruby
 @using Blazor.Abm.Shared.Models
 ```
 # Estructura de carpeta sugerida
