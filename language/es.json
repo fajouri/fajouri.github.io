@@ -1,5 +1,6 @@
 { 
     "date": "Fecha", 
     "save": "Salvar",
-    "cancel": "Cancelar" 
+    "cancel": "Cancelar",
+    "name":"Español"
 }
