@@ -1,9 +1,3 @@
-/**
-* Template Name: DevFolio - v2.2.0
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function($) {
   "use strict";
 
@@ -140,9 +134,23 @@
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function() {
+    $('.text-slider').text(language.date);
     $('.venobox').venobox({
       'share': false
     });
   });
+  
+var language; 
+function getLanguage() {
+(localStorage.getItem('language') == null) ? setLanguage('en') : false;
+$.ajax({ 
+url:  '/language/' +  localStorage.getItem('language') + '.json', 
+dataType: 'json', async: false, dataType: 'json', 
+success: function (lang) { language = lang } });
+}
+
+function setLanguage(lang) {
+localStorage.setItem('language', lang);
+}
 
 })(jQuery);
