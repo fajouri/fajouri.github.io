@@ -134,7 +134,8 @@
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function() {
-    $('.text-slider').text(language.date);
+    alert(language.name);
+    $('.text-slider').text(language.name);
     $('.venobox').venobox({
       'share': false
     });
