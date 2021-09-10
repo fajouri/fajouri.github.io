@@ -140,6 +140,8 @@
     });
   });
   
+})(jQuery);
+
 var language; 
 function getLanguage() {
 (localStorage.getItem('language') == null) ? setLanguage('en') : false;
@@ -152,5 +154,3 @@ success: function (lang) { language = lang } });
 function setLanguage(lang) {
 localStorage.setItem('language', lang);
 }
-
-})(jQuery);
