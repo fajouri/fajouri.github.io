@@ -1,5 +1,6 @@
 { 
     "date": "Date", 
     "save": "Save",
-    "cancel": "Cancel" 
+    "cancel": "Cancel",
+    "name":"English"
 }
