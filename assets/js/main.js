@@ -1,33 +1,33 @@
-(function($) {
+(function ($) {
   "use strict";
 
   var nav = $('nav');
   var navHeight = nav.outerHeight();
 
-  $('.navbar-toggler').on('click', function() {
+  $('.navbar-toggler').on('click', function () {
     if (!$('#mainNav').hasClass('navbar-reduce')) {
       $('#mainNav').addClass('navbar-reduce');
     }
   })
 
   // Preloader
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
+      $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
       });
     }
   });
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
     }
   });
-  $('.back-to-top').click(function() {
+  $('.back-to-top').click(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -35,7 +35,7 @@
   });
 
   /*--/ Star ScrollTop /--*/
-  $('.scrolltop-mf').on("click", function() {
+  $('.scrolltop-mf').on("click", function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1000);
@@ -49,7 +49,7 @@
 
   /*--/ Star Scrolling nav /--*/
   var mainNav_height = $('#mainNav').outerHeight() - 22;
-  $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function() {
+  $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -75,7 +75,7 @@
   }
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll').on("click", function() {
+  $('.js-scroll').on("click", function () {
     $('.navbar-collapse').collapse('hide');
   });
 
@@ -88,7 +88,7 @@
 
   /*--/ Navbar Menu Reduce /--*/
   $(window).trigger('scroll');
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     var pixels = 50;
     var top = 1200;
     if ($(window).scrollTop() > pixels) {
@@ -133,25 +133,25 @@
   });
 
   // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
+  $(document).ready(function () {
     getLanguage();
     $('#lblLanguage').text(language.name);
+    $('#text.services.subtitle').text(language.services.subtitle)
     $('.venobox').venobox({
       'share': false
     });
   });
-  
+
 })(jQuery);
 
-var language; 
+var language;
 function getLanguage() {
-(localStorage.getItem('language') == null) ? setLanguage('en') : false;
-$.ajax({ 
-url:  'language/' +  localStorage.getItem('language') + '.json', 
-dataType: 'json', async: false, dataType: 'json', 
-success: function (lang) { language = lang } });
+  (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+  $.ajax({
+    url: 'language/' + localStorage.getItem('language') + '.json',
+    dataType: 'json', async: false, dataType: 'json',
+    success: function (lang) { language = lang }
+  });
 }
 
-function setLanguage(lang) {
-localStorage.setItem('language', lang);
-}
+
