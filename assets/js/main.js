@@ -136,7 +136,7 @@
   $(document).ready(function () {
     getLanguage();
     $('#lblLanguage').text(language.name);
-    $('#text.services.subtitle').text(language.services-subtitle)
+    $('#text-services-subtitle').text(language.services-subtitle)
     $('.venobox').venobox({
       'share': false
     });
