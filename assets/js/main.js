@@ -241,7 +241,6 @@ function getLanguage() {
 
 function setLanguage(lang) {
   localStorage.setItem('language', lang);
-  translatePage();
 };
 
 $(document).ready(function () {
@@ -251,7 +250,6 @@ $(document).ready(function () {
 });
 
 function translatePage() {
-  alert(language);
   $('#dicAboutUs').text(language.dicAboutUs);
   $('#dicAboutUsSection').text(language.dicAboutUsSection);
   $('#dicServicesSection').text(language.dicServicesSection);
