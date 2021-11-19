@@ -241,15 +241,18 @@ function getLanguage() {
 
 function setLanguage(lang) {
   localStorage.setItem('language', lang);
+  translatePage();
 };
 
 $(document).ready(function () {
   getLanguage(language);
+  alert("documentReady");
   translatePage();
  
 });
 
 function translatePage() {
+  alert(language.dicAboutUs);
   $('#dicAboutUs').text(language.dicAboutUs);
   $('#dicAboutUsSection').text(language.dicAboutUsSection);
   $('#dicServicesSection').text(language.dicServicesSection);
