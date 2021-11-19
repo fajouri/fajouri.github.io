@@ -253,4 +253,8 @@ $(document).ready(function () {
 function translatePage() {
   $('#dicAboutUs').text(language.dicAboutUs);
   $('#dicAboutUsSection').text(language.dicAboutUsSection);
+  $('#dicServicesSection').text(language.dicServicesSection);
+  $('#dicServices').text(language.dicServices);
+  $('#dicOfficesSection').text(language.dicOfficesSection);
+  $('#dicOffices').text(language.dicOffices);
 };
