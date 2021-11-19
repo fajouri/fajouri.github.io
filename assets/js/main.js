@@ -245,14 +245,12 @@ function setLanguage(lang) {
 };
 
 $(document).ready(function () {
-  getLanguage(language);
-  alert("documentReady");
   translatePage();
  
 });
 
 function translatePage() {
-  alert(language.dicAboutUs);
+  getLanguage(language)
   $('#dicAboutUs').text(language.dicAboutUs);
   $('#dicAboutUsSection').text(language.dicAboutUsSection);
   $('#dicServicesSection').text(language.dicServicesSection);
