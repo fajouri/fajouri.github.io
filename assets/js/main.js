@@ -227,3 +227,19 @@
   }
 
 })()
+
+var language;
+function getLanguage() {
+  (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+  $.ajax({
+    url: 'language/' + localStorage.getItem('language') + '.json',
+    dataType: 'json', async: false, dataType: 'json',
+    success: function (lang) { language = lang }
+  });
+};
+
+$(document).ready(function () {
+  alert("entro???")
+  getLanguage();
+  $('#dicAboutUs').text(language.dicAboutUs);
+});

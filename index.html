@@ -41,11 +41,12 @@
           <li><a class="nav-link scrollto " href="#work">Offices</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li class="dropdown"><a href="#">
-              <i class="bi bi-globe"></i><i class="bi bi-chevron-down"></i>
+              <i class="bi bi-globe"></i>
+              <!-- <i class="bi bi-chevron-down"></i> -->
             </a>
             <ul>
-              <li><a href="#">ES</a></li>
-              <li><a href="#">EN</a></li>
+              <li><a href="" onclick="setLanguage('es')" >ES</a></li>
+              <li><a href="" onclick="setLanguage('en')">EN</a></li>
               <li><a href="#">IT</a></li>
             </ul>
           </li>
@@ -82,10 +83,7 @@
                 About Us
               </h3>
               <p class="subtitle-a">
-                We are a team with more than 10 years of experience providing solutions and services to our clients.
-                Our work methodology allows us to understand the needs of our clients and offer them the best solutions
-                that adapt to their needs.
-                In order to be close to our clients we have offices in Argentina, Italy and Malta.
+                <span id="dicAboutUs"></span>
               </p>
               <div class="line-mf"></div>
             </div>
@@ -579,6 +577,7 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
