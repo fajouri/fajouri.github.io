@@ -234,12 +234,22 @@ function getLanguage() {
   $.ajax({
     url: 'assets/language/' + localStorage.getItem('language') + '.json',
     dataType: 'json', async: false, dataType: 'json',
-    success: function (lang) { language = lang }
+    success: function (lang) {
+      alert("success");
+      alert(lang); 
+      language = lang; }
   });
 };
 
+function setLanguage(lang) {
+  alert(lang);
+  localStorage.setItem('language', lang);
+  getLanguage(language)
+  $('#dicAboutUs').text(language.dicAboutUs);
+};
+
 $(document).ready(function () {
-  alert("entro???")
-  getLanguage();
+  getLanguage(language);
+  alert(language);
   $('#dicAboutUs').text(language.dicAboutUs);
 });
