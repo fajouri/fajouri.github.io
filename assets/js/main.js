@@ -235,17 +235,22 @@ function getLanguage() {
     url: 'assets/language/' + localStorage.getItem('language') + '.json',
     dataType: 'json', async: false, dataType: 'json',
     success: function (lang) {
-      alert("success");
-      alert(lang); 
       language = lang; }
   });
 };
 
 function setLanguage(lang) {
   localStorage.setItem('language', lang);
+  translatePage();
 };
 
 $(document).ready(function () {
   getLanguage(language);
-  $('#dicAboutUs').text(language.dicAboutUs);
+  translatePage();
+ 
 });
+
+function translatePage() {
+  $('#dicAboutUs').text(language.dicAboutUs);
+  $('#dicAboutUsSection').text(language.dicAboutUsSection);
+};
