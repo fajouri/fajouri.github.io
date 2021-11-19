@@ -242,14 +242,10 @@ function getLanguage() {
 };
 
 function setLanguage(lang) {
-  alert(lang);
   localStorage.setItem('language', lang);
-  getLanguage(language)
-  $('#dicAboutUs').text(language.dicAboutUs);
 };
 
 $(document).ready(function () {
   getLanguage(language);
-  alert(language);
   $('#dicAboutUs').text(language.dicAboutUs);
 });
