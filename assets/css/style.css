@@ -1007,7 +1007,7 @@ a:hover {
   }
 }
 
-.php-email-form .error-message {
+.email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1015,7 +1015,7 @@ a:hover {
   padding: 15px;
   font-weight: 600;
 }
-.php-email-form .sent-message {
+.email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1023,13 +1023,13 @@ a:hover {
   padding: 15px;
   font-weight: 600;
 }
-.php-email-form .loading {
+.email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
-.php-email-form .loading:before {
+.email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1041,29 +1041,29 @@ a:hover {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.php-email-form input, .php-email-form textarea {
+.email-form input, .email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
-.php-email-form input:focus, .php-email-form textarea:focus {
+.email-form input:focus, .email-form textarea:focus {
   border-color: #0078ff;
 }
-.php-email-form input {
+.email-form input {
   padding: 10px 15px;
 }
-.php-email-form textarea {
+.email-form textarea {
   padding: 12px 15px;
   margin-bottom: 0;
 }
-.php-email-form button[type=submit] {
+.email-form button[type=submit] {
   background: #0078ff;
   border: 0;
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
 }
-.php-email-form button[type=submit]:hover {
+.email-form button[type=submit]:hover {
   background: #3393ff;
 }
 
