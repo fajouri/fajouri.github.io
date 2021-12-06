@@ -189,5 +189,5 @@ function translatePage() {
   $('#dicOfficesSection').text(language.dicOfficesSection);
   $('#dicOffices').text(language.dicOffices);
   $('#dicSendMessageUs').text(language.dicSendMessageUs);
-  
+  $('#dicContactOurExperts').text(language.dicContactOurExperts);
 };
