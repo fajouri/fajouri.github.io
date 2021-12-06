@@ -188,4 +188,6 @@ function translatePage() {
   $('#dicServices').text(language.dicServices);
   $('#dicOfficesSection').text(language.dicOfficesSection);
   $('#dicOffices').text(language.dicOffices);
+  $('#dicSendMessageUs').text(language.dicSendMessageUs);
+  
 };
