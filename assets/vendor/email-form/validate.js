@@ -64,7 +64,7 @@
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == '{"next":"/thanks?language=en","ok":true}') {
+      if (data.trim().indexOf('"ok":true}') != -1) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
