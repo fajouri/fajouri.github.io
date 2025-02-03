@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Self-Hosted LLM Guide</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Self-Hosted LLM Guide - Arpay Blog</title>
+  
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <a href="blog.html">Back to Blog</a>
-  </header>
-  <main>
-    <div class="col-md-12">
-  <article class="blog-post">
-    <h2>How to Implement a Self-Hosted LLM for Your Organization</h2>
-    <p>Large Language Models (LLMs) are transforming the way companies operate, enabling powerful AI-driven automation, content generation, and decision support...</p>
 
-    <h3>1. Choosing the Right Infrastructure</h3>
-    <p><strong>On-Premises vs. Cloud Deployment:</strong> Your choice depends on factors like budget, scalability, and security.</p>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">Arpay</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header><!-- End Header -->
 
-    <h4>On-Premises</h4>
-    <p>Ideal for organizations with strict compliance requirements. Requires high-performance hardware.</p>
+  <main id="main" class="container mt-5">
+    <section id="blog-article">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>How to Implement a Self-Hosted LLM for Your Organization</h2>
+          <p class="text-muted">Published on February 2024</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-10 offset-md-1">
+          <p>Large Language Models (LLMs) are transforming the way companies operate, enabling powerful AI-driven automation, content generation, and decision support...</p>
 
-    <h4>Cloud</h4>
-    <p>Scalable and easier to manage. Providers include AWS, Azure, and Google Cloud.</p>
+          <h3>1. Choosing the Right Infrastructure</h3>
+          <p><strong>On-Premises vs. Cloud Deployment:</strong> Your choice depends on factors like budget, scalability, and security.</p>
 
-    <h3>2. Selecting the Right LLM</h3>
-    <p>Popular self-hosted models:</p>
-    <ul>
-      <li><strong>Llama 2 (Meta):</strong> Various sizes available.</li>
-      <li><strong>Mistral 7B:</strong> Efficient and powerful.</li>
-      <li><strong>Falcon (TII):</strong> Optimized for multilingual applications.</li>
-    </ul>
+          <h4>On-Premises</h4>
+          <p>Ideal for organizations with strict compliance requirements. Requires high-performance hardware.</p>
 
-    <h3>3. Setting Up the LLM</h3>
-    <p>Install dependencies and download the model using Python:</p>
-    <pre>
-pip install torch transformers vllm fastapi
-    </pre>
+          <h4>Cloud</h4>
+          <p>Scalable and easier to manage. Providers include AWS, Azure, and Google Cloud.</p>
 
-    <h3>4. Deploying with an API</h3>
-    <p>Use FastAPI to serve your model:</p>
-    <pre>
+          <h3>2. Selecting the Right LLM</h3>
+          <p>Popular self-hosted models:</p>
+          <ul>
+            <li><strong>Llama 2 (Meta):</strong> Various sizes available.</li>
+            <li><strong>Mistral 7B:</strong> Efficient and powerful.</li>
+            <li><strong>Falcon (TII):</strong> Optimized for multilingual applications.</li>
+          </ul>
+
+          <h3>3. Setting Up the LLM</h3>
+          <p>Install dependencies and download the model using Python:</p>
+          <pre><code>pip install torch transformers vllm fastapi</code></pre>
+
+          <h3>4. Deploying with an API</h3>
+          <p>Use FastAPI to serve your model:</p>
+          <pre><code>
 from fastapi import FastAPI
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -54,18 +80,36 @@ def generate_text(prompt: str):
     inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
     output = model.generate(**inputs)
     return {"response": tokenizer.decode(output[0])}
-    </pre>
+          </code></pre>
 
-    <p>Run the API:</p>
-    <pre>uvicorn app:app --host 0.0.0.0 --port 8000</pre>
+          <p>Run the API:</p>
+          <pre><code>uvicorn app:app --host 0.0.0.0 --port 8000</code></pre>
 
-    <h3>5. Security & Compliance</h3>
-    <p>Encrypt data, implement role-based access control, and comply with GDPR.</p>
+          <h3>5. Security & Compliance</h3>
+          <p>Encrypt data, implement role-based access control, and comply with GDPR.</p>
 
-    <h3>How Arpay Can Help</h3>
-    <p>We help businesses deploy secure self-hosted LLMs. Contact us to get started!</p>
-  </article>
-</div>
-  </main>
+          <h3>How Arpay Can Help</h3>
+          <p>We help businesses deploy secure self-hosted LLMs. <strong>Contact us</strong> to get started!</p>
+
+          <div class="text-center">
+            <a href="blog.html" class="btn btn-primary">Back to Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End Main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>&copy; Copyright <strong><a href="index.html">Arpay</a></strong>. All Rights Reserved</p>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
