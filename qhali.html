@@ -1,257 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arpay | Cloud-Based Surgical Clinic Management</title>
-  <!-- Using Google Fonts similar to a modern, clean style -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Arpay - Qhali</title>
+  <meta content="arpay software developer solutions, Qhali, surgical clinic management" name="description">
+  <meta content="arpay, Qhali, Software Factory, Mobile Apps, Web Apps, Clinic Management" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Additional styles for the Qhali landing page -->
   <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    ul {
-      list-style: none;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* Header */
-    header {
-      background: #00529B; /* Primary blue – adjust as needed */
-      padding: 20px;
-      color: #fff;
-    }
-    header .logo {
-      font-size: 1.8em;
-      font-weight: 600;
-    }
-    nav {
-      float: right;
-    }
-    nav ul {
-      display: flex;
-      align-items: center;
-    }
-    nav li {
-      margin-left: 20px;
-    }
-    nav a {
-      color: #fff;
-      font-weight: 600;
-    }
-    /* Clearfix */
-    .clearfix::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Hero Section */
-    .hero {
-      background: url('hero-bg.jpg') no-repeat center center/cover;
-      color: #fff;
-      padding: 100px 20px;
-      text-align: center;
+    /* Qhali Hero Section */
+    .qhali-hero {
+      background: url('assets/img/intro-bg.webp') no-repeat center center/cover;
       position: relative;
+      padding: 150px 0;
+      text-align: center;
+      color: #fff;
     }
-    .hero::after {
-      content: "";
+    .qhali-hero .overlay {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
-    .hero h1 {
-      font-size: 2.8em;
+    .qhali-hero .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    /* Qhali Features Section */
+    .qhali-features {
+      padding: 60px 0;
+    }
+    .qhali-features .feature-box {
+      padding: 20px;
+      margin-bottom: 30px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      height: 100%;
+    }
+    .qhali-features .feature-box i {
+      font-size: 2.5rem;
+      color: #00529B;
       margin-bottom: 20px;
     }
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
+    .qhali-features .feature-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #00529B;
     }
-    .btn {
+    /* Qhali Call-to-Action Section */
+    .qhali-cta {
       background: #00529B;
       color: #fff;
-      padding: 12px 30px;
-      border-radius: 4px;
-      font-size: 1em;
-      transition: background 0.3s ease;
-      display: inline-block;
-    }
-    .btn:hover {
-      background: #003d73;
-    }
-
-    /* Features Section */
-    .features {
-      padding: 60px 20px;
-      background: #f4f4f4;
-    }
-    .features h2 {
+      padding: 60px 0;
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 2em;
-      color: #00529B;
     }
-    .feature-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .feature-card {
+    .qhali-cta .btn {
       background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      margin: 10px;
-      padding: 20px;
-      flex: 0 0 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .feature-card h3 {
       color: #00529B;
-      margin-bottom: 15px;
-    }
-    .feature-card p {
-      font-size: 0.95em;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .contact h2 {
-      font-size: 2em;
-      color: #00529B;
-      margin-bottom: 20px;
-    }
-    .contact p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Responsive */
-    @media(max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav li {
-        margin: 10px 0;
-      }
-      .hero {
-        padding: 60px 20px;
-      }
-      .feature-cards {
-        flex-direction: column;
-        align-items: center;
-      }
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="clearfix">
-    <div class="container">
-      <div class="logo">Arpay</div>
-      <nav>
+
+  <!-- ======= Header ======= (using your Arpay header) -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">Arpay</a></h1>
+      <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#work">Offices</a></li>
+          <li><a class="nav-link" href="blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="bi bi-translate"></i></a>
+            <ul>
+              <li><a href="#" onclick="setLanguage('es')">ES</a></li>
+              <li><a href="#" onclick="setLanguage('en')">EN</a></li>
+              <li><a href="#" onclick="setLanguage('it')">IT</a></li>
+              <li><a href="#" onclick="setLanguage('fr')">FR</a></li>
+            </ul>
+          </li>
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- ======= Qhali Hero Section ======= -->
+  <section class="qhali-hero">
+    <div class="overlay"></div>
     <div class="hero-content container">
-      <h1>Cloud-Based Surgical Clinic Management</h1>
-      <p>Streamline patient management, appointment scheduling, secure file storage, and image comparison – all in one flexible platform.</p>
-      <a href="#contact" class="btn">Request a Demo</a>
+      <h1 class="mb-4">Qhali: Cloud-Based Surgical Clinic Management</h1>
+      <p class="mb-4">
+        Streamline patient management, appointment scheduling, secure file storage, and image comparison – all in one flexible platform designed specifically for modern surgical clinics.
+      </p>
+      <a href="#contact" class="btn btn-lg">Request a Demo</a>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features">
+  <!-- ======= Qhali Features Section ======= -->
+  <section class="qhali-features">
     <div class="container">
-      <h2>Our Features</h2>
-      <div class="feature-cards">
-        <div class="feature-card">
-          <h3>Patient Management</h3>
-          <p>Add patients, maintain detailed clinical histories, and use advanced filters to quickly search records.</p>
+      <div class="section-title text-center">
+        <h2>Key Features of Qhali</h2>
+        <p>Discover how Qhali can transform your surgical clinic operations.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-people"></i>
+            <h3>Patient Management</h3>
+            <p>Add patients seamlessly, maintain detailed clinical histories, and search records quickly using advanced filters.</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <h3>Appointment Scheduling</h3>
-          <p>Book various appointment types across multiple locations with full customization to fit your clinic’s needs.</p>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-calendar-check"></i>
+            <h3>Appointment Scheduling</h3>
+            <p>Book various appointment types across multiple locations with full customization to fit your clinic's needs.</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <h3>Cloud File Storage</h3>
-          <p>Upload and organize patient files securely in a structured cloud-based system.</p>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-cloud-upload"></i>
+            <h3>Cloud File Storage</h3>
+            <p>Securely upload and organize patient files in the cloud for easy access and efficient management.</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <h3>Image Capture & Comparison</h3>
-          <p>Capture, upload, and compare images side by side to monitor patient progress and support diagnostics.</p>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-image"></i>
+            <h3>Image Capture & Comparison</h3>
+            <p>Capture, upload, and compare images side by side to monitor patient progress and enhance diagnostic accuracy.</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <h3>Customizable Settings</h3>
-          <p>Tailor appointment types, diagnosis lists, and intervention options to your clinic’s unique requirements.</p>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-gear"></i>
+            <h3>Customizable Settings</h3>
+            <p>Tailor appointment types, diagnosis lists, and intervention options to suit your clinic’s unique requirements.</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <h3>Advanced Search</h3>
-          <p>Quickly locate patient records using powerful search filters designed for busy clinical environments.</p>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <i class="bi bi-search"></i>
+            <h3>Advanced Search</h3>
+            <p>Easily locate patient records with powerful search filters, saving you time and improving efficiency.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <!-- ======= Qhali Call-to-Action Section ======= -->
+  <section class="qhali-cta" id="contact">
     <div class="container">
-      <h2>Get Started Today</h2>
-      <p>Experience the future of surgical clinic management. Contact us to schedule a demo and see how our solution can transform your practice.</p>
-      <a href="mailto:info@arpay.ee" class="btn">Contact Us</a>
+      <h2>Ready to Revolutionize Your Clinic?</h2>
+      <p>
+        Experience Qhali in action. Contact us today to schedule a demo and discover how our solution can transform your surgical clinic management.
+      </p>
+      <a href="mailto:info@arpay.ee" class="btn btn-lg">Contact Us</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- ======= Footer ======= (using your Arpay footer style) -->
+  <footer id="footer">
     <div class="container">
-      <p>&copy; 2025 Arpay. All rights reserved.</p>
+      <div class="copyright">
+        &copy; 2025 <strong><span>Arpay</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Arpay
+      </div>
     </div>
   </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
