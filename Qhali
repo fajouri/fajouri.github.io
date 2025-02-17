@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arpay | Cloud-Based Surgical Clinic Management</title>
+  <!-- Using Google Fonts similar to a modern, clean style -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background: #00529B; /* Primary blue – adjust as needed */
+      padding: 20px;
+      color: #fff;
+    }
+    header .logo {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+    nav {
+      float: right;
+    }
+    nav ul {
+      display: flex;
+      align-items: center;
+    }
+    nav li {
+      margin-left: 20px;
+    }
+    nav a {
+      color: #fff;
+      font-weight: 600;
+    }
+    /* Clearfix */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: #00529B;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 4px;
+      font-size: 1em;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #003d73;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 60px 20px;
+      background: #f4f4f4;
+    }
+    .features h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2em;
+      color: #00529B;
+    }
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin: 10px;
+      padding: 20px;
+      flex: 0 0 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .feature-card h3 {
+      color: #00529B;
+      margin-bottom: 15px;
+    }
+    .feature-card p {
+      font-size: 0.95em;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2em;
+      color: #00529B;
+      margin-bottom: 20px;
+    }
+    .contact p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav li {
+        margin: 10px 0;
+      }
+      .hero {
+        padding: 60px 20px;
+      }
+      .feature-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="clearfix">
+    <div class="container">
+      <div class="logo">Arpay</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Cloud-Based Surgical Clinic Management</h1>
+      <p>Streamline patient management, appointment scheduling, secure file storage, and image comparison – all in one flexible platform.</p>
+      <a href="#contact" class="btn">Request a Demo</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Our Features</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <h3>Patient Management</h3>
+          <p>Add patients, maintain detailed clinical histories, and use advanced filters to quickly search records.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Appointment Scheduling</h3>
+          <p>Book various appointment types across multiple locations with full customization to fit your clinic’s needs.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Cloud File Storage</h3>
+          <p>Upload and organize patient files securely in a structured cloud-based system.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Image Capture & Comparison</h3>
+          <p>Capture, upload, and compare images side by side to monitor patient progress and support diagnostics.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Customizable Settings</h3>
+          <p>Tailor appointment types, diagnosis lists, and intervention options to your clinic’s unique requirements.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Advanced Search</h3>
+          <p>Quickly locate patient records using powerful search filters designed for busy clinical environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get Started Today</h2>
+      <p>Experience the future of surgical clinic management. Contact us to schedule a demo and see how our solution can transform your practice.</p>
+      <a href="mailto:info@arpay.ee" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Arpay. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
