@@ -37,7 +37,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      /* Increased opacity for better text legibility */
+      background: rgba(0, 0, 0, 0.7);
       z-index: 1;
     }
     .qhali-hero .hero-content {
@@ -80,6 +81,7 @@
       padding: 12px 30px;
       border-radius: 50px;
       font-weight: bold;
+      margin: 0 5px;
     }
   </style>
 </head>
@@ -116,11 +118,13 @@
   <section class="qhali-hero">
     <div class="overlay"></div>
     <div class="hero-content container">
-      <h1 class="mb-4">Qhali: Cloud-Based Surgical Clinic Management</h1>
+      <h1 class="mb-4"><span id="dicQhaliTitle">Qhali: Cloud-Based Surgical Clinic Management</span></h1>
       <p class="mb-4">
-        Streamline patient management, appointment scheduling, secure file storage, and image comparison – all in one flexible platform designed specifically for modern surgical clinics.
+        <span id="dicQhaliSubtitle">Streamline patient management, appointment scheduling, secure file storage, and image comparison – all in one flexible platform designed specifically for modern surgical clinics.</span>
       </p>
-      <a href="#contact" class="btn btn-lg">Request a Demo</a>
+      <!-- Two CTA buttons: one to request demo (scrolls to contact) and one to see demo credentials via modal -->
+      <a href="#contact" class="btn btn-lg"><span id="dicRequestDemo">Request a Demo</span></a>
+      <a href="#" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal"><span id="dicSeeDemo">See Demo</span></a>
     </div>
   </section>
 
@@ -181,13 +185,33 @@
   <!-- ======= Qhali Call-to-Action Section ======= -->
   <section class="qhali-cta" id="contact">
     <div class="container">
-      <h2>Ready to Revolutionize Your Clinic?</h2>
+      <h2><span id="dicQhaliCTA">Ready to Revolutionize Your Clinic?</span></h2>
       <p>
-        Experience Qhali in action. Contact us today to schedule a demo and discover how our solution can transform your surgical clinic management.
+        <span id="dicQhaliCTASubtitle">Experience Qhali in action. Contact us today to schedule a demo and discover how our solution can transform your surgical clinic management.</span>
       </p>
-      <a href="mailto:info@arpay.ee" class="btn btn-lg">Contact Us</a>
+      <a href="mailto:info@arpay.ee" class="btn btn-lg"><span id="dicContactUs">Contact Us</span></a>
     </div>
   </section>
+
+  <!-- ======= Demo Modal ======= -->
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="demoModalLabel">Demo Access</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Username:</strong> 123@123.com</p>
+          <p><strong>Password:</strong> Passw0rd!</p>
+          <p><strong>URL:</strong> <a href="https://qhali.azurewebsites.net" target="_blank">https://qhali.azurewebsites.net</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ======= Footer ======= (using your Arpay footer style) -->
   <footer id="footer">
@@ -207,6 +231,44 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Example multi-language script (assumes a setLanguage function exists) -->
+  <script>
+    // Sample language dictionaries (extend as needed)
+    const languages = {
+      en: {
+        dicQhaliTitle: "Qhali: Cloud-Based Surgical Clinic Management",
+        dicQhaliSubtitle: "Streamline patient management, appointment scheduling, secure file storage, and image comparison – all in one flexible platform designed specifically for modern surgical clinics.",
+        dicRequestDemo: "Request a Demo",
+        dicSeeDemo: "See Demo",
+        dicQhaliCTA: "Ready to Revolutionize Your Clinic?",
+        dicQhaliCTASubtitle: "Experience Qhali in action. Contact us today to schedule a demo and discover how our solution can transform your surgical clinic management.",
+        dicContactUs: "Contact Us"
+      },
+      es: {
+        dicQhaliTitle: "Qhali: Gestión en la Nube para Clínicas Quirúrgicas",
+        dicQhaliSubtitle: "Optimice la gestión de pacientes, la programación de citas, el almacenamiento seguro de archivos y la comparación de imágenes, todo en una sola plataforma flexible diseñada para clínicas quirúrgicas modernas.",
+        dicRequestDemo: "Solicitar una Demostración",
+        dicSeeDemo: "Ver Demo",
+        dicQhaliCTA: "¿Listo para revolucionar su clínica?",
+        dicQhaliCTASubtitle: "Experimente Qhali en acción. Contáctenos hoy para programar una demostración y descubrir cómo nuestra solución puede transformar la gestión de su clínica quirúrgica.",
+        dicContactUs: "Contáctenos"
+      }
+      // Add other languages (it, fr, etc.) as needed.
+    };
+
+    // A simple setLanguage function example
+    function setLanguage(lang) {
+      const dict = languages[lang] || languages.en;
+      for (const key in dict) {
+        const el = document.getElementById(key);
+        if (el) {
+          el.innerText = dict[key];
+        }
+      }
+    }
+    // Optionally, set default language
+    setLanguage('en');
+  </script>
 </body>
 
 </html>
