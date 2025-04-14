@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qhali Web App - Professional Tutorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f8f8f8;
+      color: #555;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Professional Guide to Managing Your Practice with Qhali</h1>
+
+    <section>
+      <h2>1. Secure Login to Your Dashboard</h2>
+      <img src="sofwarePhotos/Login.png" alt="Login Screen">
+      <img src="sofwarePhotos/DoctorDashboard.png" alt="Doctor Dashboard">
+      <p>Access your account with secure login credentials. The professional dashboard offers an overview of your practice, upcoming appointments, and quick access to essential functions.</p>
+    </section>
+
+    <section>
+      <h2>2. Manage Users and Practice Locations</h2>
+      <img src="sofwarePhotos/AdminMenu.png" alt="Admin Menu">
+      <img src="sofwarePhotos/AddNewUser.png" alt="Add New User">
+      <img src="sofwarePhotos/PlacesList.png" alt="Places List">
+      <p>From the admin menu, efficiently add new practitioners, assistants, or administrative users. Configure practice locations to streamline patient bookings and resource management.</p>
+    </section>
+
+    <section>
+      <h2>3. Add and Manage Patient Profiles</h2>
+      <img src="sofwarePhotos/NewPatient.png" alt="New Patient">
+      <img src="sofwarePhotos/patientProfile.png" alt="Patient Profile">
+      <p>Create detailed patient profiles capturing essential demographic, clinical, and contact information. Maintain comprehensive records for safe, personalized care.</p>
+    </section>
+
+    <section>
+      <h2>4. Access and Update Patient Information</h2>
+      <img src="sofwarePhotos/patientProfileAppoinmtents.png" alt="Patient Appointments">
+      <img src="sofwarePhotos/patientProfileEmail.png" alt="Patient Email">
+      <img src="sofwarePhotos/patientProfileMedical record.png" alt="Medical Record">
+      <p>Quickly review each patient’s appointment history, email correspondence, and medical records from a single, unified profile.</p>
+    </section>
+
+    <section>
+      <h2>5. Schedule Appointments and Interventions</h2>
+      <img src="sofwarePhotos/Appointments calendar.png" alt="Appointments Calendar">
+      <img src="sofwarePhotos/patientProfilenewAppoinmtent.png" alt="New Appointment">
+      <img src="sofwarePhotos/patientProfilenewAppoinmtentIntervention.png" alt="Appointment Intervention">
+      <img src="sofwarePhotos/AppoinmentTypes.png" alt="Appointment Types">
+      <img src="sofwarePhotos/Intervention Types.png" alt="Intervention Types">
+      <p>Utilize the smart calendar and appointment system to schedule patient visits and interventions seamlessly. Define appointment types and customize intervention templates for precision.</p>
+    </section>
+
+    <section>
+      <h2>6. Record Diagnostics and Clinical Notes</h2>
+      <img src="sofwarePhotos/Diagnostics.png" alt="Diagnostics">
+      <img src="sofwarePhotos/Create a Note.png" alt="Create a Note">
+      <p>Document diagnostic details and clinical notes directly within the patient’s profile. Maintain a clear, chronological medical history for every patient.</p>
+    </section>
+
+    <section>
+      <h2>7. Manage Attachments and Consent Forms</h2>
+      <img src="sofwarePhotos/PatientAttachments.png" alt="Patient Attachments">
+      <img src="sofwarePhotos/PatientAttachmentsFileUpload.png" alt="File Upload">
+      <img src="sofwarePhotos/PatientAttachmentsFolders.png" alt="Attachment Folders">
+	  <img src="sofwarePhotos/PatientAttachmentsFileView.png" alt="File View">
+      <img src="sofwarePhotos/PatientAttachmentsFileSign.png" alt="File To Sign">
+	  <img src="sofwarePhotos/PatientAttachmentsFileSigned.png" alt="File Signed">
+      <p>Upload, categorize, and securely store patient attachments. Access signed consent forms and relevant documentation anytime, ensuring legal and clinical compliance.</p>
+    </section>
+
+    <section>
+      <h2>8. Document Patient Photos and Compare Results</h2>
+      <img src="sofwarePhotos/patientPhotos.png" alt="Patient Photos">
+      <img src="sofwarePhotos/PatientPhotoLit.png" alt="Photo List">
+      <img src="sofwarePhotos/patientPhotosCompare.png" alt="Compare Photos">
+      <img src="sofwarePhotos/Before.png" alt="Before Treatment">
+      <img src="sofwarePhotos/after.png" alt="After Treatment">
+      <p>Capture and compare patient photos over time to visually document treatment progress and outcomes. Offer patients clear, professional visual records of their care journey.</p>
+    </section>
+
+    <section>
+      <h2>9. Finalize and Maintain Medical Records</h2>
+      <img src="sofwarePhotos/Medical Record.png" alt="Medical Record">
+      <p>Keep comprehensive, up-to-date medical records. Ensure all patient interactions and clinical actions are properly documented for future reference and audits.</p>
+    </section>
+
+    <footer>
+      <p>Start managing your practice with confidence. Contact us today to learn more and get started with Qhali.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
