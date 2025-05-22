@@ -1,0 +1,136 @@
+<!-- index-en.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qhali | Practice Management & Photo Documentation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <style>
+    .hero {
+      background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
+      color: #fff;
+      position: relative;
+      padding: 120px 0;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Qhali</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary ms-lg-3">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center text-white d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container position-relative">
+      <h1 class="display-4 fw-bold">Transform Your Practice with Qhali</h1>
+      <p class="lead my-4">All-in-one photo documentation, scheduling, and patient management built for modern clinics.</p>
+      <a href="#" class="btn btn-lg btn-success">Request a Demo</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="bi bi-camera-style fs-1 text-primary"></i>
+          <h3 class="mt-3">Photo Comparison</h3>
+          <p>Instantly compare before & after to showcase your expertise and track patient progress.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="bi bi-calendar-check fs-1 text-primary"></i>
+          <h3 class="mt-3">Smart Scheduling</h3>
+          <p>Optimize your calendar with automated reminders and waitlist management.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="bi bi-shield-lock fs-1 text-primary"></i>
+          <h3 class="mt-3">HIPAA Secure</h3>
+          <p>Top-tier encryption and audit logs to keep patient data fully protected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Doctors Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <blockquote class="blockquote">
+              <p class="mb-4">"Qhali has revolutionized how I manage patient photos. It’s intuitive and saves me hours each week."</p>
+              <footer class="blockquote-footer">Dr. Jane Smith, Dermatologist</footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item text-center">
+            <blockquote class="blockquote">
+              <p class="mb-4">"Our practice saw a 25% increase in patient retention after integrating Qhali’s scheduling module."</p>
+              <footer class="blockquote-footer">Dr. John Doe, Plastic Surgeon</footer>
+            </blockquote>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Choose Your Plan</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Basic</h5>
+              <h6 class="card-price">$49<span class="period">/mo</span></h6>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Photo Comparison</li>
+                <li>Basic Scheduling</li>
+                <li>Email Support</li>
+              </ul>
+              <a href="#" class="btn btn-outline-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-primary">
+            <div class="card-body text-center">
+              <h5 class="card
