@@ -1,136 +1,126 @@
-<!-- index-en.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qhali | Practice Management & Photo Documentation</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom Styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qhali Practice Management Software</title>
   <style>
-    .hero {
-      background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-      color: #fff;
-      position: relative;
-      padding: 120px 0;
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; }
+    a { color: #2a9d8f; text-decoration: none; }
+    img { max-width: 100%; display: block; border-radius: 4px; }
+
+    /* Layout */
+    header, section, footer { padding: 60px 20px; width: 90%; max-width: 1100px; margin: auto; }
+    .grid { display: grid; gap: 40px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+    /* Hero */
+    header { text-align: center; background: #2a9d8f; color: white; border-radius: 8px; }
+    header h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    header p { font-size: 1.2rem; margin-bottom: 30px; }
+    .btn-primary {
+      display: inline-block; background: #e9c46a; color: #2a9d8f;
+      padding: 15px 30px; border-radius: 50px; font-size: 1rem;
+      transition: background 0.3s ease;
     }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-    }
+    .btn-primary:hover { background: #f4a261; }
+
+    /* Features */
+    .feature { text-align: center; }
+    .feature h3 { margin: 20px 0 10px; color: #264653; }
+    .feature p { color: #555; }
+
+    /* Testimonials */
+    .testimonial { background: #f7f7f7; padding: 30px; border-radius: 8px; }
+    .testimonial p { font-style: italic; margin-bottom: 15px; }
+    .testimonial h4 { font-weight: bold; }
+
+    /* Contact */
+    .contact-info { text-align: center; }
+    .contact-info p { margin: 10px 0; font-size: 1.1rem; }
+    .contact-info a { font-weight: bold; }
+
+    footer { text-align: center; font-size: 0.9rem; color: #777; margin-top: 40px; }
   </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
-
-  <!-- Navigation -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Qhali</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <a href="#" class="btn btn-primary ms-lg-3">Start Free Trial</a>
-      </div>
-    </div>
-  </nav>
+<body>
 
   <!-- Hero Section -->
-  <section class="hero text-center text-white d-flex align-items-center">
-    <div class="overlay"></div>
-    <div class="container position-relative">
-      <h1 class="display-4 fw-bold">Transform Your Practice with Qhali</h1>
-      <p class="lead my-4">All-in-one photo documentation, scheduling, and patient management built for modern clinics.</p>
-      <a href="#" class="btn btn-lg btn-success">Request a Demo</a>
-    </div>
-  </section>
+  <header>
+    <h1>Qhali: Streamline Your Practice, Elevate Patient Care</h1>
+    <p>All-in-one, secure practice management—appointments, records, billing, and patient communications in one intuitive dashboard.</p>
+    <a href="#contact" class="btn-primary">Get a Free Demo</a>
+  </header>
 
-  <!-- Features Section -->
-  <section id="features" class="py-5">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <i class="bi bi-camera-style fs-1 text-primary"></i>
-          <h3 class="mt-3">Photo Comparison</h3>
-          <p>Instantly compare before & after to showcase your expertise and track patient progress.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <i class="bi bi-calendar-check fs-1 text-primary"></i>
-          <h3 class="mt-3">Smart Scheduling</h3>
-          <p>Optimize your calendar with automated reminders and waitlist management.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <i class="bi bi-shield-lock fs-1 text-primary"></i>
-          <h3 class="mt-3">HIPAA Secure</h3>
-          <p>Top-tier encryption and audit logs to keep patient data fully protected.</p>
-        </div>
+  <!-- Key Benefits -->
+  <section>
+    <h2 style="text-align:center; margin-bottom:40px;">Why Choose Qhali?</h2>
+    <div class="grid grid-2">
+      <div class="feature">
+        <!-- Optional: drop in an icon or screenshot -->
+        <h3>Secure & Compliant</h3>
+        <p>Bank-grade encryption keeps patient data safe, while built-in consent forms simplify compliance with GDPR and HIPAA.</p>
+      </div>
+      <div class="feature">
+        <h3>Effortless Scheduling</h3>
+        <p>Smart calendar and automated reminders reduce no-shows and keep your day on track.</p>
+      </div>
+      <div class="feature">
+        <h3>Comprehensive Patient Profiles</h3>
+        <p>All demographics, medical history, notes, attachments, and photos in one place for fast, informed care.</p>
+      </div>
+      <div class="feature">
+        <h3>Customizable Workflows</h3>
+        <p>Create tailored appointment types, interventions, and reporting templates that fit your specialty.</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">What Our Doctors Say</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active text-center">
-            <blockquote class="blockquote">
-              <p class="mb-4">"Qhali has revolutionized how I manage patient photos. It’s intuitive and saves me hours each week."</p>
-              <footer class="blockquote-footer">Dr. Jane Smith, Dermatologist</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-item text-center">
-            <blockquote class="blockquote">
-              <p class="mb-4">"Our practice saw a 25% increase in patient retention after integrating Qhali’s scheduling module."</p>
-              <footer class="blockquote-footer">Dr. John Doe, Plastic Surgeon</footer>
-            </blockquote>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <!-- Image Gallery (optional) -->
+  <section>
+    <h2 style="text-align:center; margin-bottom:30px;">See Qhali in Action</h2>
+    <div class="grid grid-2">
+      <!-- Replace src with your actual image paths -->
+      <img src="softwarePhotos/DoctorDashboard.png" alt="Dashboard overview">
+      <img src="softwarePhotos/AppointmentsCalendar.png" alt="Appointment calendar">
+      <img src="softwarePhotos/PatientProfile.png" alt="Patient profile">
+      <img src="softwarePhotos/ConsentForm.png" alt="Digital consent form">
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <h2 style="text-align:center; margin-bottom:40px;">What Our Users Say</h2>
+    <div class="grid grid-2">
+      <div class="testimonial">
+        <p>"Switching to Qhali cut no-shows by 30% and saved me hours every week on admin."</p>
+        <h4>— Dr. Maria Lopez, Dermatology Clinic</h4>
+      </div>
+      <div class="testimonial">
+        <p>"The photo-comparison tool is a game changer for tracking progress and engaging patients in their care."</p>
+        <h4>— Dr. Jonas Schmidt, Aesthetic Practice</h4>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section id="pricing" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Choose Your Plan</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <h5 class="card-title">Basic</h5>
-              <h6 class="card-price">$49<span class="period">/mo</span></h6>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Photo Comparison</li>
-                <li>Basic Scheduling</li>
-                <li>Email Support</li>
-              </ul>
-              <a href="#" class="btn btn-outline-primary">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 border-primary">
-            <div class="card-body text-center">
-              <h5 class="card
+  <!-- Call to Action -->
+  <section id="contact">
+    <h2 style="text-align:center; margin-bottom:20px;">Ready to Transform Your Practice?</h2>
+    <p style="text-align:center;">Contact us today to schedule your personalized demo and discover why clinics around the world trust Qhali.</p>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:info@arpay.ee">info@arpay.ee</a></p>
+      <p>Phone: <a href="tel:+393493806329">+39 349 380 6329</a></p>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+      <a href="mailto:info@arpay.ee" class="btn-primary">Request a Demo</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Qhali. All rights reserved.
+  </footer>
+
+</body>
+</html>
