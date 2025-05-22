@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Qhali by Arpay | Cloud-Based Surgical Clinic Management</title>
+  <meta content="Streamline surgical clinic operations with Qhali: patient management, scheduling, secure storage & image comparison." name="description">
+  <meta content="Qhali, surgical clinic management, Arpay, patient scheduling, medical software" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Topbar */
+    #topbar {
+      background: #00529B;
+      color: #fff;
+      padding: 5px 0;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    /* Hero */
+    .qhali-hero {
+      background: url('assets/img/qhali-hero-bg.webp') no-repeat center center/cover;
+      position: relative;
+      padding: 140px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .qhali-hero .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    .qhali-hero .hero-content { position: relative; z-index: 2; }
+    /* Feature Boxes */
+    .feature-box { transition: transform 0.3s; }
+    .feature-box:hover { transform: translateY(-5px); }
+    /* Gallery */
+    .gallery img { border-radius: 8px; margin-bottom: 15px; }
+    /* Testimonials */
+    .testimonial-item { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+    .testimonial-item img { width: 60px; border-radius: 50%; margin-right: 15px; }
+    /* Contact Section */
+    .contact-info i { font-size: 1.2rem; color: #00529B; margin-right: 8px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <section id="topbar">
+    <div class="container d-flex justify-content-center">
+      <div>Email: <a href="mailto:info@arpay.ee" class="text-white">info@arpay.ee</a> | Phone: <a href="tel:+393493806329" class="text-white">+39 349 380 6329</a></div>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="#">Arpay</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#features">Features</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="qhali-hero" id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content container">
+      <h1>Qhali</h1>
+      <h2>Cloud-Based Surgical Clinic Management</h2>
+      <p>All-in-one platform for patient management, scheduling, secure storage, and image comparison.</p>
+      <a href="#contact" class="btn btn-lg btn-light me-2">Request a Demo</a>
+      <a href="#gallery" class="btn btn-lg btn-outline-light">See Screenshots</a>
+    </div>
+  </section>
+
+  <!-- About Qhali -->
+  <section id="about" class="pt-5 pb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="assets/img/qhali-overview.webp" alt="Qhali Overview" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h2>Why Choose Qhali?</h2>
+          <p>Designed specifically for modern surgical clinics, Qhali offers flexibility, security, and scalability. Manage your entire clinic seamlessly and focus on patient care.</p>
+          <ul>
+            <li>HIPAA-compliant data security</li>
+            <li>Multi-location support</li>
+            <li>Customizable workflows</li>
+            <li>24/7 support & training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="qhali-features bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-4">
+        <h2>Key Features</h2>
+        <p>Everything you need for efficient clinic operations.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <div class="feature-box p-4 text-center bg-white rounded shadow">
+            <i class="bi bi-people"></i>
+            <h3>Patient Management</h3>
+            <p>Seamless patient records, clinical histories, and advanced filters.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box p-4 text-center bg-white rounded shadow">
+            <i class="bi bi-calendar-check"></i>
+            <h3>Appointment Scheduling</h3>
+            <p>Customizable across locations with automated reminders.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box p-4 text-center bg-white rounded shadow">
+            <i class="bi bi-cloud-upload"></i>
+            <h3>Secure Cloud Storage</h3>
+            <p>Encrypted file management with role-based access.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box p-4 text-center bg-white rounded shadow">
+            <i class="bi bi-image"></i>
+            <h3>Image Comparison</h3>
+            <p>Side-by-side image comparison for tracking progress.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box p-4 text-center bg-white rounded shadow">
+            <i class="bi bi-gear"></i>
+            <h3>Custom Settings</h3>
+            <p>Tailor workflows, diagnosis lists, and intervention options.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box p-4 text-center bg-white rounded shadow">
+            <i class="bi bi-search"></i>
+            <h3>Advanced Search</h3>
+            <p>Powerful filters to locate records in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="pt-5 pb-5">
+    <div class="container">
+      <div class="section-title text-center mb-4">
+        <h2>Screenshots</h2>
+        <p>See Qhali in action.</p>
+      </div>
+      <div class="row gallery">
+        <!-- Replace with your own screenshots -->
+        <div class="col-md-4"><img src="assets/img/qhali-screenshot1.webp" alt="Dashboard view" class="img-fluid"></div>
+        <div class="col-md-4"><img src="assets/img/qhali-screenshot2.webp" alt="Appointment scheduling" class="img-fluid"></div>
+        <div class="col-md-4"><img src="assets/img/qhali-screenshot3.webp" alt="Image comparison" class="img-fluid"></div>
+      </div>
+      <p class="text-center mt-3">Have more screenshots? Add them here to showcase your workflow.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-light pt-5 pb-5">
+    <div class="container">
+      <div class="section-title text-center mb-4">
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="testimonial-item d-flex align-items-start">
+            <img src="assets/img/testimonial1.jpg" alt="Client photo">
+            <div>
+              <h5>Dr. Maria Rossi</h5>
+              <p>“Qhali transformed our clinic’s efficiency. Scheduling and record-keeping have never been easier.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="testimonial-item d-flex align-items-start">
+            <img src="assets/img/testimonial2.jpg" alt="Client photo">
+            <div>
+              <h5>Dr. John Smith</h5>
+              <p>“The image comparison feature is a game-changer for tracking patient progress over time.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA Section -->
+  <section id="contact" class="qhali-cta text-center pt-5 pb-5">
+    <div class="container">
+      <h2>Ready to Revolutionize Your Clinic?</h2>
+      <p>Contact us to schedule your personalized demo.</p>
+      <div class="mt-3">
+        <a href="mailto:info@arpay.ee" class="btn btn-light btn-lg me-2">Email Us</a>
+        <a href="tel:+393493806329" class="btn btn-outline-light btn-lg">Call +39 349 380 6329</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="pt-3 pb-3">
+    <div class="container text-center">
+      <small>&copy; 2025 Arpay. All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
